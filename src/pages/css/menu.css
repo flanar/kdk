@@ -1,0 +1,69 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.heartContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.round {
+    color: white;
+    text-decoration: none;
+    background-color: #0081CF;
+    width: 500px;
+    height: 100px;
+    line-height: 100px;
+    position: relative;
+    border-radius: 40px;
+    box-shadow: 0px 0px 50px 0px rgba(255,255,255,0.75);
+}
+
+.round:hover {
+    background-color: #845EC2;
+}
+
+/* heart */
+
+.heart {
+    background-color: red;
+    height: 200px;
+    transform: rotate(-45deg);
+    width: 200px;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    height: 200px;
+    position: absolute;
+    width: 200px;
+}
+
+.heart:before {
+    top: -100px;
+    left: 0;
+}
+
+.heart:after {
+    top: 0;
+    left: 100px;
+}
