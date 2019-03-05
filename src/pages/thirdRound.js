@@ -46,7 +46,7 @@ class FirstRound extends React.Component {
         return <div>
         <div className="boxContainer">
             { this.state.songs.map((song) => {
-                return ( <Box key={ song.id } songId={ song.id } plateId={ song.plateId } songAuthor={ song.songAuthor } songTitle={ song.songTitle}></Box> )
+                return ( <Box history={this.props.history} key={ song.id } songId={ song.id } plateId={ song.plateId } songAuthor={ song.songAuthor } songTitle={ song.songTitle}></Box> )
             }) }
         </div>
     </div>

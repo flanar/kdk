@@ -5,6 +5,7 @@ class Box extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            backToMenu: false,
             showSongTitle: true,
             highlight: false,
             songId: props.songId,
@@ -44,9 +45,18 @@ class Box extends React.Component {
                 highlight: !prevState.highlight
             }));
         }
+        else if(event.keyCode === 8) {
+            this.setState(state => {
+                state.backToMenu = true
+            })
+            this.forceUpdate()
+        }
     }
 
     render() {
+        if(this.state.backToMenu) {
+            this.props.history.replace('/')
+        }
         return <div>
             <div className="line">
                 <div className={ this.state.highlight ? "plate-highlight" : "plate" } onClick={this.handlePlateClick}></div>
