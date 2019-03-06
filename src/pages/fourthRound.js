@@ -30,13 +30,13 @@ class FirstRound extends React.Component {
                     id: 52,
                     plateId: 82,
                     songAuthor: "Chrum chrum 4",
-                    songTitle: "---"
+                    songTitle: "Szabasówka"
                 },
                 {
                     id: 53,
                     plateId: 84,
                     songAuthor: "Chrum chrum 5",
-                    songTitle: "---"
+                    songTitle: "Lej się chmielu"
                 }
             ]
         };

@@ -36,7 +36,7 @@ class FirstRound extends React.Component {
                     id: 53,
                     plateId: 84,
                     songAuthor: "Autor nieznany",
-                    songTitle: "---"
+                    songTitle: "The Spanish Flea"
                 }
             ]
         };

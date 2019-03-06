@@ -12,7 +12,7 @@ class FirstRound extends React.Component {
                     id: 49,
                     plateId: 81,
                     songAuthor: "Krosno",
-                    songTitle: "Kraków"
+                    songTitle: "Przeleciał mnie słowiczek"
                 },
                 {
                     id: 50,
@@ -35,8 +35,8 @@ class FirstRound extends React.Component {
                 {
                     id: 53,
                     plateId: 84,
-                    songAuthor: "Żywiec",
-                    songTitle: "A idom, se idom"
+                    songAuthor: "Sącz",
+                    songTitle: "Krakowiok II"
                 }
             ]
         };
