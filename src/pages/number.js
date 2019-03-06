@@ -55,7 +55,7 @@ class Number extends React.Component {
         }
         return <div>
             <div className="line">
-                <div className={ `${this.state.highlight === 0 ? " number" : ""} ${this.state.highlight === 1 ? "number-highlight" : ""} ${this.state.highlight === 2 ? "highlighted" : ""}` }>{ this.state.numberValue }</div>
+                <div className={ `${this.state.highlight === 0 ? " number" : ""} ${this.state.highlight === 1 ? "number-done" : ""} ${this.state.highlight === 2 ? "number-highlight" : ""}` }>{ this.state.numberValue }</div>
             </div>
         </div>
     }

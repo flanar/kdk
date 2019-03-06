@@ -15,7 +15,7 @@
     font-size: 40px;
 }
 
-.number-highlight {
+.number-done {
     width: 100px;
     height: 100px;
     line-height: 100px;
@@ -26,7 +26,7 @@
     font-size: 40px;
 }
 
-.highlighted {
+.number-highlight {
     width: 100px;
     height: 100px;
     line-height: 100px;
