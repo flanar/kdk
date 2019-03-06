@@ -10,7 +10,12 @@ class Menu extends React.Component {
             secondRound: false,
             thirdRound: false,
             fourthRound: false,
-            finalRound: false
+            finalRound: false,
+            highlightFirst: false,
+            highlightSecond: false,
+            highlightThird: false,
+            highlightFourth: false,
+            highlightFinal: false
         };
 
         this.handleKeyDown = this.handleKeyDown.bind(this);
@@ -46,6 +51,26 @@ class Menu extends React.Component {
                 state.finalRound = true
             })
             this.forceUpdate()
+        } else if(event.keyCode === 81) {
+            this.setState(prevState => ({
+                highlightFirst: !prevState.highlightFirst
+            }));
+        } else if(event.keyCode === 87) {
+            this.setState(prevState => ({
+                highlightSecond: !prevState.highlightSecond
+            }));
+        } else if(event.keyCode === 69) {
+            this.setState(prevState => ({
+                highlightThird: !prevState.highlightThird
+            }));
+        } else if(event.keyCode === 82) {
+            this.setState(prevState => ({
+                highlightFourth: !prevState.highlightFourth
+            }));
+        } else if(event.keyCode === 84) {
+            this.setState(prevState => ({
+                highlightFinal: !prevState.highlightFinal
+            }));
         }
     }
     
@@ -67,11 +92,11 @@ class Menu extends React.Component {
                     <div className="heart"></div>
                 </div>
                 <div className="menuContainer">
-                    <Link to="/firstRound/" className="round">Runda Pierwsza</Link>
-                    <Link to="/secondRound/" className="round">Runda Druga</Link>
-                    <Link to="/thirdRound/" className="round">Runda Trzecia</Link>
-                    <Link to="/fourthRound/" className="round">Runda Koszerna</Link>
-                    <Link to="/finalRound/" className="round">Wielki Fianał</Link>
+                    <Link to="/firstRound/" className={ `${"round"} ${this.state.highlightFirst ?  "roundHighlighted" : ""}` }>Runda Pierwsza</Link>
+                    <Link to="/secondRound/" className={ `${"round"} ${this.state.highlightSecond ?  "roundHighlighted" : ""}` }>Runda Druga</Link>
+                    <Link to="/thirdRound/" className={ `${"round"} ${this.state.highlightThird ?  "roundHighlighted" : ""}` }>Runda Trzecia</Link>
+                    <Link to="/fourthRound/" className={ `${"round"} ${this.state.highlightFourth ?  "roundHighlighted" : ""}` }>Runda Koszerna</Link>
+                    <Link to="/finalRound/" className={ `${"round"} ${this.state.highlightFinal ?  "roundHighlighted" : ""}` }>Wielki Fianał</Link>
                 </div>
             </div>
         </div>

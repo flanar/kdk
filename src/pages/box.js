@@ -55,7 +55,7 @@ class Box extends React.Component {
 
     render() {
         if(this.state.backToMenu) {
-            this.props.history.replace('/')
+            this.props.history.push('/')
         }
         return <div>
             <div className="line">
