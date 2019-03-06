@@ -96,7 +96,7 @@ class Menu extends React.Component {
                     <Link to="/secondRound/" className={ `${"round"} ${this.state.highlightSecond ?  "roundHighlighted" : ""}` }>Runda Druga</Link>
                     <Link to="/thirdRound/" className={ `${"round"} ${this.state.highlightThird ?  "roundHighlighted" : ""}` }>Runda Trzecia</Link>
                     <Link to="/fourthRound/" className={ `${"round"} ${this.state.highlightFourth ?  "roundHighlighted" : ""}` }>Runda Koszerna</Link>
-                    <Link to="/finalRound/" className={ `${"round"} ${this.state.highlightFinal ?  "roundHighlighted" : ""}` }>Wielki Fianał</Link>
+                    <Link to="/finalRound/" className={ `${"round"} ${this.state.highlightFinal ?  "roundHighlighted" : ""}` }>Wielki Finał</Link>
                 </div>
             </div>
         </div>
