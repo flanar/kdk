@@ -1,42 +1,47 @@
 import React from "react"
 
-import Box from "./box"
+import Number from "./number"
 
 class FirstRound extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            songs: [
+            numbers: [
                 {
                     id: 49,
-                    plateId: 81,
-                    songAuthor: "---",
-                    songTitle: "---"
+                    highlightId: 81,
+                    value: 1
                 },
                 {
                     id: 50,
-                    plateId: 87,
-                    songAuthor: "---",
-                    songTitle: "---"
+                    highlightId: 87,
+                    value: 2
                 },
                 {
                     id: 51,
-                    plateId: 69,
-                    songAuthor: "---",
-                    songTitle: "---"
+                    highlightId: 69,
+                    value: 3
                 },
                 {
                     id: 52,
-                    plateId: 82,
-                    songAuthor: "---",
-                    songTitle: "---"
+                    highlightId: 82,
+                    value: 4
                 },
                 {
                     id: 53,
-                    plateId: 84,
-                    songAuthor: "---",
-                    songTitle: "---"
+                    highlightId: 84,
+                    value: 5
+                },
+                {
+                    id: 54,
+                    highlightId: 89,
+                    value: 6
+                },
+                {
+                    id: 55,
+                    highlightId: 85,
+                    value: 7
                 }
             ]
         };
@@ -45,8 +50,8 @@ class FirstRound extends React.Component {
     render() {
         return <div>
         <div className="boxContainer">
-            { this.state.songs.map((song) => {
-                return ( <Box history={this.props.history} key={ song.id } songId={ song.id } plateId={ song.plateId } songAuthor={ song.songAuthor } songTitle={ song.songTitle}></Box> )
+            { this.state.numbers.map((number) => {
+                return ( <Number history={this.props.history} key={ number.id } numberId={ number.id } numberHighlightId={ number.highlightId } numberValue={ number.value }></Number> )
             }) }
         </div>
     </div>

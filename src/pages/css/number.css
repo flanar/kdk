@@ -1,0 +1,39 @@
+.line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.number {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;
+    background-color: #B39CD0;
+    cursor: pointer;
+    margin-right: 40px;
+    font-size: 40px;
+}
+
+.number-highlight {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;
+    background-color: #4B4453;
+    cursor: pointer;
+    margin-right: 40px;
+    font-size: 40px;
+}
+
+.highlighted {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;
+    background-color: #FF9671;
+    cursor: pointer;
+    margin-right: 40px;
+    font-size: 40px;
+    box-shadow: 0px 0px 50px 0px rgba(255,255,255,0.75);
+}
