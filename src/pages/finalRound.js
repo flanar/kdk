@@ -1,4 +1,5 @@
 import React from "react"
+import ReactCountdownClock  from "react-countdown-clock"
 
 import Number from "./number"
 
@@ -7,6 +8,7 @@ class FirstRound extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            pause: true,
             numbers: [
                 {
                     id: 49,
@@ -45,14 +47,37 @@ class FirstRound extends React.Component {
                 }
             ]
         };
+        this.handleKeyDown = this.handleKeyDown.bind(this);
+    }
+
+    componentDidMount() {
+        document.addEventListener('keydown', this.handleKeyDown, false)
+    }
+
+    handleKeyDown(event) {
+        if(event.keyCode === 32) {
+            this.setState(prevState => ({
+                pause: !prevState.pause
+            }));
+        }
     }
 
     render() {
         return <div>
-        <div className="boxContainer">
+        <div className="finalContainer">
+            <div className="numberContainer">
             { this.state.numbers.map((number) => {
                 return ( <Number history={this.props.history} key={ number.id } numberId={ number.id } numberHighlightId={ number.highlightId } numberValue={ number.value }></Number> )
             }) }
+            </div>
+            <div className="clockContainer">
+            <ReactCountdownClock seconds={30}
+                     color="#AA9671"
+                     size={300}
+                     paused={this.state.pause}
+                     showMilliseconds={false}
+                     />
+            </div>
         </div>
     </div>
     }
