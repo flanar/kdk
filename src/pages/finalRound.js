@@ -73,7 +73,8 @@ class FirstRound extends React.Component {
             <div className="clockContainer">
             <ReactCountdownClock seconds={30}
                      color="#AA9671"
-                     size={300}
+                     size={500}
+                     weight={5}
                      paused={this.state.pause}
                      showMilliseconds={false}
                      />

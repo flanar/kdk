@@ -36,12 +36,12 @@ class Menu extends React.Component {
                 state.secondRound = true
             })
             this.forceUpdate()
-        } else if(event.keyCode === 51) {
+        } else if(event.keyCode === 52) {
             this.setState(state => {
                 state.thirdRound = true
             })
             this.forceUpdate()
-        } else if(event.keyCode === 52) {
+        } else if(event.keyCode === 51) {
             this.setState(state => {
                 state.fourthRound = true
             })
@@ -59,11 +59,11 @@ class Menu extends React.Component {
             this.setState(prevState => ({
                 highlightSecond: !prevState.highlightSecond
             }));
-        } else if(event.keyCode === 69) {
+        } else if(event.keyCode === 82) {
             this.setState(prevState => ({
                 highlightThird: !prevState.highlightThird
             }));
-        } else if(event.keyCode === 82) {
+        } else if(event.keyCode === 69) {
             this.setState(prevState => ({
                 highlightFourth: !prevState.highlightFourth
             }));
@@ -94,8 +94,8 @@ class Menu extends React.Component {
                 <div className="menuContainer">
                     <Link to="/firstRound/" className={ `${"round"} ${this.state.highlightFirst ?  "roundHighlighted" : ""}` }>Runda Pierwsza</Link>
                     <Link to="/secondRound/" className={ `${"round"} ${this.state.highlightSecond ?  "roundHighlighted" : ""}` }>Runda Druga</Link>
-                    <Link to="/thirdRound/" className={ `${"round"} ${this.state.highlightThird ?  "roundHighlighted" : ""}` }>Runda Trzecia</Link>
                     <Link to="/fourthRound/" className={ `${"round"} ${this.state.highlightFourth ?  "roundHighlighted" : ""}` }>Runda Koszerna</Link>
+                    <Link to="/thirdRound/" className={ `${"round"} ${this.state.highlightThird ?  "roundHighlighted" : ""}` }>Runda Czwarta</Link>
                     <Link to="/finalRound/" className={ `${"round"} ${this.state.highlightFinal ?  "roundHighlighted" : ""}` }>Wielki Finał</Link>
                 </div>
             </div>
